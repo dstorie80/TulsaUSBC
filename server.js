@@ -25,7 +25,39 @@ app.get('/', (req, res) => {
     res.render('homepage')
 });
 
+app.get('/about_us', (req, res) => {
+    res.render('about_us')
+});
+
+app.get('/contact_us', (req, res) => {
+    res.render('contact_us')
+});
+
+app.get('/league_bowling', (req, res) => {
+    res.render('league_bowling')
+});
+
+app.get('/partners', (req, res) => {
+    res.render('partners')
+});
+
+app.get('/recognition', (req, res) => {
+    res.render('recognition')
+});
+
+app.get('/tournaments', (req, res) => {
+    res.render('tournaments')
+});
+
+app.get('/youth_bowling', (req, res) => {
+    res.render('youth_bowling')
+});
+
+app.get('/homepage', (req, res) => {
+    res.render('homepage')
+});
+
 
 app.listen(PORT, () => {
-    console.log(`Server is running on ${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });

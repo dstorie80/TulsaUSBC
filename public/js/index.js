@@ -1,27 +1,20 @@
-console.log(Hammer); // use Hammer, not hammer
-
 document.addEventListener('DOMContentLoaded', function() {
 
     var sidenav = document.getElementById('sidenav');
-    console.log('sidenav:', sidenav); // check if sidenav is found
+    
 
     var body = document.body;
     var hammerBody = new Hammer(body);
     
     hammerBody.on('swiperight', function(ev) {
-        console.log('swiperight event fired');
-        console.log('ev.center.x:', ev.center.x);
-        console.log('condition is true');
         sidenav.classList.add('active');
-        console.log(sidenav);
+
     });
 
     var hammerDocument = new Hammer(sidenav);
 
     hammerDocument.on('swipeleft', function(ev) {
-        console.log('swipeleft event fired');
         sidenav.classList.remove('active');
-        console.log(sidenav);
     });
 });
 
